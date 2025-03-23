@@ -45,12 +45,13 @@ public class Main {
         List<Product> nameFiltered = inventory.filterProducts(NameFilter.byNameContains("shirt"));
         nameFiltered.forEach(System.out::println);
 
-        // Applying a 10% discount to Electronics
+        // Applying discount to Electronics dynamically using the new method
         System.out.println("\nApplying 10% discount to Electronics:");
-        inventory.applyDiscount(product -> {
-            if (product instanceof Electronics) {
-                System.out.println(product.getName() + " discounted to: " + (product.getPrice() * 0.9));
-            }
-        });
+        inventory.applyDiscount(product -> product instanceof Electronics, 10);
+
+        // You can also apply discounts to any other category or condition:
+        // For example, applying a 15% discount to Clothing:
+        System.out.println("\nApplying 15% discount to Clothing:");
+        inventory.applyDiscount(product -> product instanceof Clothing, 15);
     }
 }
