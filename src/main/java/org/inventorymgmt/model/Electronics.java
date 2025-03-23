@@ -10,9 +10,6 @@ public class Electronics extends Product {
         this.warranty = warranty;
     }
 
-    public String getBrand() { return brand; }
-    public int getWarranty() { return warranty; }
-
     @Override
     public String toString() {
         return super.toString() + String.format(", Brand: %s, Warranty: %d months", brand, warranty);

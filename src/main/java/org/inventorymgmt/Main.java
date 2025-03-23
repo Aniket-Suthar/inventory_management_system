@@ -24,7 +24,7 @@ public class Main {
 
         // Retrieving a product
         System.out.println("\nGetting Product:");
-        inventory.getProductById("E101").ifPresentOrElse(
+        inventory.getProductById("D101").ifPresentOrElse(
                 System.out::println,
                 () -> System.out.println("Product not found")
         );

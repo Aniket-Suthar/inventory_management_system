@@ -11,9 +11,6 @@ public class Clothing extends Product {
         this.color = color;
     }
 
-    public String getSize() { return size; }
-    public String getColor() { return color; }
-
     @Override
     public String toString() {
         return super.toString() + String.format(", Size: %s, Color: %s", size, color);
